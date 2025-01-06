@@ -1,11 +1,11 @@
 
-import 'bootstrap/dist/css/bootstrap.min.css';
+
 import React from 'react'
+
 import { Container, Row, Col } from 'react-bootstrap'
 import UserCardView from './UserCardView'
 
-
-function Home() {
+function HomePage() {
     return (
         <Container className='bg-light'>
             {/* <Row>
@@ -23,4 +23,4 @@ function Home() {
     )
 }
 
-export default Home
+export default HomePage
