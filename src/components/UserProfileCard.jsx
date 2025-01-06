@@ -7,7 +7,6 @@ function UserProfileCard({ user }) {
     const naviagte = useNavigate();
 
     const handleReadPost = () => {
-        console.log("naviagting..")
         naviagte(`/posts/${user.id}`);
     }
 

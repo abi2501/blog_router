@@ -42,7 +42,7 @@ function BlogListSearch({ userId }) {
     }
 
     const handleAddPost = (post) => {
-        console.log("Add post", post);
+
         addNewPost(dispatcher, {
             ...post,
             "userId": parseInt(userId)

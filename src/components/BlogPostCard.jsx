@@ -9,8 +9,6 @@ import { useDispatch } from 'react-redux';
 
 function BlogPostCard({ post }) {
 
-    console.log("mypost ", post.id)
-
     const [show, setShow] = useState(false);
     const dispatcher = useDispatch();
 
@@ -25,8 +23,7 @@ function BlogPostCard({ post }) {
     }
 
     const handleEditPost = (postData) => {
-        console.log("edit ", post);
-        console.log(postData);
+
         editPost(dispatcher, { ...postData, id: post.id, userId: post.userId });
     }
 

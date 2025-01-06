@@ -32,7 +32,7 @@ export const fetchAllPosts = async (dispatcher) => {
 }
 
 export const searchPost = (dispatcher, text) => {
-    console.log("searching ..")
+
     dispatcher({
         type: "blogReducer/searchPost",
         payload: { title: text }
@@ -63,7 +63,7 @@ export const addNewPost = async (dispatcher, post) => {
         },
         body: JSON.stringify(post),
     });
-    console.log(response);
+
     if (response.ok) {
         dispatcher({
             type: "blogReducer/addPost",
@@ -73,7 +73,7 @@ export const addNewPost = async (dispatcher, post) => {
 }
 
 export const editPost = async (dispatcher, post) => {
-    console.log("update  post ", post)
+
     const response = await fetch(POST_URI, {
         method: 'POST',
         headers: {
@@ -81,7 +81,7 @@ export const editPost = async (dispatcher, post) => {
         },
         body: JSON.stringify(post),
     });
-    console.log(response);
+
     if (response.ok) {
         dispatcher({
             type: "blogReducer/updatePost",
