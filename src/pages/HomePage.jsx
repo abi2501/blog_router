@@ -7,13 +7,7 @@ import UserCardView from './UserCardView'
 
 function HomePage() {
     return (
-        <Container className='bg-light'>
-            {/* <Row>
-                <Col>
-                    <div>Search User</div>
-                </Col>
-            </Row>
-            <br /> */}
+        <Container className='bg-light'>           
             <Row>
                 <Col>
                     <UserCardView />

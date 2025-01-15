@@ -7,20 +7,26 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 import { Button, CardHeader, Col, Container, Form, Row } from 'react-bootstrap';
 import BlogPostCard from '../components/BlogPostCard';
-import { fetchAllPosts, searchPost } from '../redux/blogServices';
+import { fetchAllPosts, fetchAllUsers, searchPost } from '../redux/blogServices';
 import BlogListHeader from '../components/BlogListHeader';
 import BlogListSearch from '../components/BlogListSearch';
 
 function PostListByUserView() {
 
+    // const dispatcher = useDispatch();
+
+    // useEffect(() => {
+    //     fetchAllUsers(dispatcher);
+    //     fetchAllPosts(dispatcher);
+    // });
+
     const { userId } = useParams();
+
     const posts = useSelector(getAllPosts);
     const users = useSelector(getAllUsers);
-
+    // debugger
     const postLists = posts.filter((post) => post.userId === parseInt(userId));
-
     const flag = postLists.some((post) => post.userId === parseInt(userId));
-
     const name = users.find((usr) => usr.id === parseInt(userId)).name;
 
     return (

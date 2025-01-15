@@ -12,13 +12,6 @@ function UserCardView() {
     const userList = useSelector(getAllUsers);
     const userLoader = useSelector(getUserLoading);
 
-    const dispatcher = useDispatch();
-
-    useEffect(() => {
-        fetchAllUsers(dispatcher);
-        fetchAllPosts(dispatcher);
-    }, []);
-
     const userCardList = userList.map((user, idx) => {
         return <UserProfileCard key={user.id} user={user} />
     });
