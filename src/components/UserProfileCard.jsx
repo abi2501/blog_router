@@ -1,8 +1,13 @@
 import React from 'react'
 import { useNavigate } from 'react-router-dom'
-import profile2 from '../../public/profile_2.jpg'
-import profile1 from '../../public/profile.jpeg'
-import profile3 from '../../public/profile_3.jpg'
+
+import profile1 from '../assets/images/profile_1.jpg'
+import profile2 from '../assets/images/profile_2.jpg'
+import profile3 from '../assets/images/profile_3.jpg'
+import profile4 from '../assets/images/profile_4.jpg'
+import profile5 from '../assets/images/profile_5.jpg'
+import profile6 from '../assets/images/profile_6.jpg'
+
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
@@ -21,13 +26,14 @@ function UserProfileCard({ user }) {
         naviagte(`/user/${user.id}`);
     }
 
-    const images = import.meta.glob('/src/assets/images/*.{png,jpg,jpeg,svg}');
+    // const images = import.meta.glob('/src/assets/images/*.{png,jpg,jpeg,svg}');
 
-    let imageList = [];
-    for (const img in images) {
-        imageList.push(img);
-    }
+    // let imageList = [];
+    // for (const img in images) {
+    //     imageList.push(img);
+    // }
 
+    const imageList = [profile1, profile2, profile3, profile4, profile5, profile6]
     const profile_img = imageList[Math.floor(Math.random() * imageList.length)]
 
     const postList = useSelector(getAllPosts);
