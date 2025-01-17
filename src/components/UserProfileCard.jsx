@@ -74,7 +74,7 @@ function UserProfileCard({ user }) {
                             </Badge>
                         </div>
                     </div>
-                    <Button variant='info' className='border-0 rounded-0 text-white p-2' onClick={handleReadPost}>
+                    <Button variant='info' style={{ "backgroundColor": "#31B6BF" }} className='border-0 rounded-0 text-white p-2' onClick={handleReadPost}>
                         Read Posts
                     </Button>
                 </div>
