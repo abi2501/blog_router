@@ -39,6 +39,11 @@ export const searchPost = (dispatcher, text) => {
     });
 }
 
+export const fetchPostById = (postList, postId) => {
+    // const postList = getAllPosts;
+    // console.log(postList, postId);
+    return postList.find((post) => post.id === parseInt(postId))
+}
 
 export const deletePost = async (dispatcher, id) => {
     const response = await fetch(`${POST_URI}/${id}`, {

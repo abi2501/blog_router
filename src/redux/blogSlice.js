@@ -68,16 +68,14 @@ const blogSlice = createSlice({
         },
         deletePost: (state, action) => {
             state.posts = [...state.posts].filter((post) => post.id != action.payload.id);
-        }
-    }
+        },
+    },
 });
 
 export const { getUserData, addPost } = blogSlice.actions
 export default blogSlice.reducer;
 
-
 export const getAllUsers = (state) => state.bstore.users.userList;
 export const getUserLoading = (state) => state.bstore.users.loading;
-
 
 export const getAllPosts = (state) => state.bstore.posts;
