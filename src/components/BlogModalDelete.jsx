@@ -17,18 +17,6 @@ function BlogModalDelete({ delShow, handleClose }) {
                             <p>Do you want to delete this Post</p>
                         </Col>
                     </Row>
-                    <Row>
-                        <Col className="text-end">
-                            {/* <Button variant='outline' style={{ cursor: 'pointer' }} >
-                                <FontAwesomeIcon icon={faCheck} className="icon" />
-                                <span>Ok</span>
-                            </Button>
-                            <Button variant='outline' style={{ cursor: 'pointer' }}>
-                                <FontAwesomeIcon icon={faXmark} className="icon" />
-                                <span>Cancel</span>
-                            </Button> */}
-                        </Col>
-                    </Row>
                 </Container>
             </Modal.Body>
 
