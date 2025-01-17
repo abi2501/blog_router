@@ -21,7 +21,7 @@ function UserProfileCard({ user }) {
         naviagte(`/user/${user.id}`);
     }
 
-    const images = import.meta.glob('/src/assets/images/*.{png,jpg,jpeg,svg}');
+    const images = import.meta.glob('/public/images/*.{png,jpg,jpeg,svg}');
 
     let imageList = [];
     for (const img in images) {
